@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MyGasQ | Your road to gas money savings</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		img#logo{
+			position: relative;
+			height: 50px;
+			top: -10px;
+		}
+		#gasPrice{
+			position: relative;
+			top: -30px;
+			font-size: 150px;
+			color: #c55a10;
+			margin-left: 50px;
+		}
+
+		
+		#gasPriceOffer{margin-top: 50px}
+		label#state{
+			width: 100px;
+			color: #3F8ACA;
+			font-size: 20px;
+			font-weight: 300;
+		}
+		#perGallon{
+			position: relative;
+			top: -75px;
+			margin-left: 250px;
+			position: relative;
+			font-size: 35px;
+
+		}
+		div.blue{
+			color: #3F8ACA;
+			font-size: 20px;
+			font-weight: 300;
+		}
+		font.blue{
+			color:#3F8ACA;
+		}
+		font.larger{
+			font-size: 35px;
+			font-weight: bold;
+		}
+		.orange{
+			color: #C55A10;
+		}
+		#prepurchaseButton{
+			position: relative;
+			top: -100px;
+
+			margin-left: 250px;
+		}
+		#signUpContainer{
+			position: relative;
+			z-index: 1;
+			background-color: #fff;
+			height: 500px;
+		}
+			#signUpWrapper{
+				margin-top: 20px;
+				margin-left: 20px;
+			}
+			#signUp{
+				font-size: 15px;
+				font-weight: 300;
+			}
+		#mainBody{
+			position: relative;
+			top: -20px;
+		}
+		#signUpForm{
+			margin-top: 20px;
+		}
+		#drive{
+			width: 100%;
+			position: relative;
+			top: -20px;
+		}
+		#drive2{
+			width: 100%;
+			position: relative;
+		}
+		.img-responsive{
+			width: 50%;
+			margin: auto;
+		}
+		.center{
+			text-align: center;
+
+		}
+		#steps{
+			margin-bottom: 50px;
+
+		}
+		#orangeLine{
+		 	display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 8px solid #C55A10;
+		    margin: 1em 0;
+		    padding: 0;
+		}
+		#navigation{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.hidden{display: none}
+
+		#firstRow{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+	
+	</style>
+  </head>	
+  <body>
+		<!--POPUP WINDOW FOR EXPLANATIONS-->
+		
+		<div class="modal fade" id="howItWorks" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="gridSystemModalLabel">How it works!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="row">
+					<div class="col-md-4">
+						<h1>Pre-purchase gas</h1>
+						<div class="lead">Relieve the stress of fluctuating gas prices by buying as much as you can to fill your gas Queue</div>
+					</div>
+					<div class="col-md-4">
+						<h1>Wait</h1>
+						<div class="lead">Take ease in knowing you have gallons available in your queue for use when gas prices rise. Enjoy low gas prices and buy gas as you normally would at any gas station. Let MyGasQ help you maximize your savings by electing to receive an email or text queue when you use your gallons</div>
+					</div>
+					<div class="col-md-4">
+						<h1>Start Saving</h1>
+						<div class="lead">Enjoy your savings with simple redemption. Visit MyGasQ within 24 hours after a fill up at any gas station. The value of your redeemed gallons will be electronically deposited at today’s high prices into the account of your choice within 24 hours of resulting in instant savings. No commitments, no surprises. For example, if you pre-purchased 20 gallons at $2 per gallon, you would have paid $40. Then redeemed your 20 gallons at $3.50 per gallon. $70 would be deposited within 24 hours into your account resulting in $30 in instant gas savings</div>
+					</div> 
+		        </div>     
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!--NEWSLETTER CONFIRMATION POPUP-->
+		<div class="modal fade" id="newsletterPopup" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="gridSystemModalLabel">Thank you for joining our newsletter</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="row">
+					<div class="col-md-12">
+						You have joined the mygasq newsletter.  We'll notify you when we are ready for launch.
+					</div>
+		          
+		        </div>     
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	
+	
+	
+	<!--NAVIGATION BAR-->
+	
+	<nav class="navbar navbar-default">
+		<div class="container" id="navigation">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+			<div class="row">
+				<div class="col-md-12">
+	    			<div class="navbar-header">
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png" alt="MyGasQ Logo"/></a>
+			    </div>
+		    		<!-- Collect the nav links, forms, and other content for toggling -->
+	    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      		
+		      			<form action="main.html" class="navbar-form navbar-right" role="login">
+					        <div class="form-group">
+					          <input type="text" class="form-control" placeholder="Email">
+								
+					        </div>
+							<div class="form-group">
+					          <input type="password" class="form-control" placeholder="Password">
+								
+					        </div>
+					        <button type="submit" class="btn btn-orange">Login</button>
+							<a href="forgotMyPassword.html">Forgot my password</a>
+					    </form>
+		      			
+		    		</div><!-- /.navbar-collapse -->
+				</div><!--.col-md-12-->
+			</div><!--.row-->
+	  </div><!-- /.container-->
+	</nav> <!--end of navigation bar-->
+	
+	<img src="img/drive.png" class="img-responsive image" id="drive" alt="Responsive image">
+	
+	<!--Main Body-->
+	<div class="container" id="mainBody">
+			
+			
+			<div class="col-md-12 col-xs-12 center" id="firstRow">
+				<font class="blue larger">Pre-purchase gas while</font>
+				<h1><font class="blue">the prices are low</font></h1>
+				<div class="lead">Buy now and save later</div>
+				<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#howItWorks" value="How it works!"/>
+			</div><!--.col-md-12, #firstRow-->
+		
+		
+		
+		
+	
+	</div><!--.container-->
+		
+		<div class="container hidden-xs" id="steps">
+			<div class="col-md-12 center">
+				<h1>Every Penny Counts</h1>
+				<div class="lead">
+					Your road to savings
+				</div>
+				<hr id="orangeLine" />
+			</div>
+			<div class="col-md-4">
+					<div class="lead center">
+						When gas prices drop, buy as much as you want at that low price
+					</div>
+					<img src="img/Gas Icon.png" alt="Gas Icon" class="img-responsive icons">
+
+
+			</div>
+			<div class="col-md-4">
+
+					<div class="lead center">
+						Wait until gas prices rise above your pre-purchased price
+					</div>
+					<img src="img/Time Icon.png" alt="Gas Icon" class="img-responsive icons">
+
+	
+			</div>
+			<div class="col-md-4">
+
+					<div class="lead center">
+						Save by redeeming your gallons at the higher gas price.
+					</div><!--description-->
+					<img src="img/Dollar sign Icon.png" alt="Gas Icon" class="img-responsive icons">
+
+
+			</div>
+			
+		</div><!--.container, #steps-->
+		
+		
+		<img src="img/drive2.png" alt="Drive" class="img-responsive" id="drive2">
+		
+		<div class="container" id="lastRow">
+		
+			<div class="col-md-7 col-xs-12" id="gasPriceOffer"> <!--GAS PRICES-->
+				
+				<h1>Today's Gas Price Offer</h1>
+				
+				<form class="form-inline">
+				  	<div class="form-group">
+					    <label for="zipcode" id="state">California</label>
+					    <input type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+					</div>
+	  				<button type="submit" class="btn btn-orange">Update</button>
+				</form>
+				<form action="signUp.html">
+					<font id="gasPrice">$1.96</font>
+					<div class="lead blue" id="perGallon">
+						Per Gallon
+					</div>
+					<div id="prepurchaseButton">
+						<button type="submit" class="btn btn-primary btn-lg">Pre-purchase</button>
+					</div>	
+				</form><!--.action="SignUp.html"-->
+			</div><!--.col-md-7-->
+			
+			
+			<div class="col-md-5 col-xs-12" id="signUpContainer">
+				<div id="signUpWrapper">
+					<div id="signUp" class="orange">
+						<img src="img/logo Icon.png" alt="myGasQ Logo" /> <font size="4">Sign Up! It's Free.</font>
+						<form action="signUp.html" method="post" class="form-horizontal" id="signUpForm">
+						  <div class="form-group">
+						    	<div class="col-sm-10">
+							      	<input type="text" class="form-control" id="fullName" placeholder="Full Name">
+							    </div>
+						  </div>
+						  <div class="form-group">
+						    	<div class="col-sm-10">
+							      	<input type="email" class="form-control" id="email" placeholder="Email">
+							    </div>
+						  </div>
+						  <div class="form-group">
+							    <div class="col-sm-10">
+							      	<input type="password" class="form-control" id="password" placeholder="Password">
+							    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-10">
+						      <div class="checkbox">
+						        <label>
+						          <input type="checkbox"> Remember me
+						        </label>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-10">
+						      <button type="submit" class="btn btn-orange">Sign in</button>
+						    </div>
+						  </div>
+						</form>
+					</div><!--#signUp-->
+					<hr>
+					<div id="signUpLead">
+						<h4>Not ready to sign up?</h4>
+						<div class="lead">We'll send you a queue once is too good not to buy</div>
+						  <div class="form-group">
+						    <input type="text" class="form-control" id="email" placeholder="Email">
+						  </div>
+		  				  <button type="submit" class="btn btn-orange" data-toggle="modal" data-target="#newsletterPopup">Update</button>
+						
+					</div><!--#signUpLead-->
+				</div><!--#signUpWrapper-->
+				
+				
+			</div><!--.col-md-5, #signUpContainer-->
+	
+		</div><!--#lastRow-->
+		
+		<!--FOOTER-->
+		<footer class="footer center">
+		     <div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul id="footer">
+							<li><a href="main.html">Home</a></li>
+							<li><a href="login.html">Login</a></li>
+							<li><a href="helpCenter.html">FAQ</a></li>
+							<li><a href="aboutUs.html">About Us</a></li>
+							<li><a href="signUp.html">Sign Up</a></li>
+						</ul>
+					</div>
+					<div class="col-md-12 center">
+						<img src="img/Logo.png" />
+					</div>
+			 	</div><!--.row-->	
+		     </div>
+	    </footer><!--.footer-->
+
+		
+	
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		
+	</script>
+  </body>
+</html>

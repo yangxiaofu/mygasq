@@ -1,0 +1,18 @@
+
+
+/* FOOTER CSS */
+.footer{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+ul#footer{
+	margin-left: 0;
+}
+	ul#footer li{
+		text-decoration: none;
+		display: inline;
+		margin-left: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}

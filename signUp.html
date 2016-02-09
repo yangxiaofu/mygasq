@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MyGasQ | Your road to gas money savings</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		/* Navigation */
+		img#logo{
+			position: relative;
+			height: 50px;
+			top: -10px;
+		}
+		#navigation{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		
+		/* Main css */
+		#dashboardContainer{
+			background-color: #ECECEC;
+			border: 1px solid #CECDCD;
+			border-radius: 3px;
+			padding-bottom: 10px;
+		}
+		.separator{
+			padding-bottom: 20px;
+		}
+		.center{
+			text-align: center;
+		}
+		font.large{
+			font-size: 20px;
+			color: #616060;
+		}
+		font.blue{
+			font-size: 15px;
+			color: #1480CC;
+		}
+		font.green{
+			color: #417505;
+		}
+		font.orange{
+			font-size: 25px;
+			color: #c55a10;
+		}
+		hr.orange{
+			display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 5px solid #C55A10;
+		    margin: 5px 0;
+		    padding: 0;
+		}
+		.vertical-line{
+			border-right: 1px solid #cecece;
+		}
+		#middleRow{
+			margin-bottom: 25px;
+		}
+		
+		#innerBody{
+			background-color: #fff;
+			padding: 20px 10px;
+		}
+		ul#years{
+			text-decoration: none;
+			padding-left: 0px;
+		}
+			ul#years li{
+				display: inline;
+				padding-left: 0px;
+				padding-right: 25px;
+			}
+
+	
+	</style>
+  </head>	
+  <body>
+	<!--modal-->
+	<div class="modal fade" id="popup" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">An email is being sent your way</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Please wait a couple of minutes for instructions on resetting your email.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<!--NAVIGATION BAR-->
+	
+	<nav class="navbar navbar-default">
+		<div class="container" id="navigation">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+			<div class="row">
+				<div class="col-md-12">
+	    			<div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a href="index.html"class="navbar-brand" href="#"><img id="logo" src="img/logo.png" alt="MyGasQ Logo"/></a>
+			    </div>
+		    		<!-- Collect the nav links, forms, and other content for toggling -->
+	    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      		
+		      			
+		      			<ul class="nav navbar-nav navbar-right">
+					        <li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, Kamesha <span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li><a href="#">Settings</a></li>
+					            <li><a href="index.html">Log Out</a></li>
+					          </ul>
+					        </li>
+					    </ul>
+		    		</div><!-- /.navbar-collapse -->
+				</div><!--.col-md-12-->
+			</div><!--.row-->
+	  </div><!-- /.container-->
+	</nav> <!--end of navigation bar-->
+	
+
+	<!--mainBody-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Sign Up</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-xs-12">
+				<div class="alert alert-danger">
+					<p>We could not find the username and password combination</p>
+					<p>You need to enter a valid email address</p>
+					<p>The password is not long enough</p>
+					<p>Your name is required</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-xs-6">
+				<form action="main.html" class="form-horizontal" id="signUpForm">
+				  <div class="form-group">
+				    	<div class="col-sm-10">
+					      	<input type="text" class="form-control" id="fullName" placeholder="Full Name">
+					    </div>
+				  </div>
+				  <div class="form-group">
+				    	<div class="col-sm-10">
+					      	<input type="email" class="form-control" id="email" placeholder="Email">
+					    </div>
+				  </div>
+				  <div class="form-group">
+					    <div class="col-sm-10">
+					      	<input type="password" class="form-control" id="password" placeholder="Password">
+					    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-10">
+				      <div class="checkbox">
+				        <label>
+				          <input type="checkbox"> Remember me
+				        </label>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-10">
+				      <button type="submit" class="btn btn-orange">Sign in</button>
+				    </div>
+				  </div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+		
+	<!--FOOTER-->
+	<footer class="footer center">
+	     <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul id="footer">
+						<li><a href="main.html">Home</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="helpCenter.html">FAQ</a></li>
+						<li><a href="aboutUs.html">About Us</a></li>
+						<li><a href="signUp.html">Sign Up</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-12 center">
+					<img src="img/Logo.png" />
+				</div>
+		 	</div><!--.row-->	
+	     </div>
+    </footer><!--.footer-->
+	
+	
+
+
+	
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		$("input[name=gallonsToPurchase]").click(function(){
+			
+			var gallonsToPurchase = $(this).val();
+			//$("input#gallonsChosen").val(gallonsToPurchase);
+			$("#gallonsChosen").text(gallonsToPurchase);
+			//alert($("input[name=gallonsToPurchase]:checked").val());
+		});
+	</script>
+  </body>
+</html>

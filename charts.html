@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+       	 var data = google.visualization.arrayToDataTable([
+		        ['Gallons', 'Gas Remaining', {role: 'style'},'To be redeemed', {role: 'style'}, 'Gallons Redeemed',  {role: 'style'} ],
+		        ['Gas', 400, '#c55a10', 20, '#EDAC7F', 80, '#cecece']
+		      ]);
+
+		      var options = {
+		        width: 150,
+		        height: 100,
+				legend: {position: 'none'},
+		        bar: { groupWidth: '75%' },
+		        isStacked: true
+		      };
+	
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
